@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThreadKeep — Mike & Chris, June 15</title>
+<style>
+  :root{
+    --ink:#211e30;--dim:#56506a;--faint:#8b84a0;--violet:#6f5fd0;--violet2:#5443b8;
+    --teal:#1d9e75;--amber:#b97e12;--line:#e7e4f1;--paper:#fff;--bg:#efedf5;
+    --disp:'Space Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;
+    --body:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.62;font-size:16px}
+  .page{max-width:720px;margin:34px auto;background:var(--paper);border-radius:16px;
+    padding:46px 52px 40px;box-shadow:0 26px 60px -38px rgba(50,40,100,.45)}
+  .eyebrow{font-family:var(--disp);font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--violet);font-weight:600}
+  h1{font-family:var(--disp);font-size:30px;letter-spacing:-.02em;margin:6px 0 4px;font-weight:700}
+  .when{color:var(--faint);font-size:14px;margin-bottom:22px}
+  .lede{font-size:18px;color:var(--ink);margin:0 0 26px;line-height:1.55}
+  .lede b{color:var(--violet2)}
+  h2{font-family:var(--disp);font-size:18px;margin:30px 0 8px;letter-spacing:-.01em;font-weight:600;
+    display:flex;align-items:baseline;gap:10px}
+  h2 .n{font-size:13px;color:#fff;background:var(--violet);width:24px;height:24px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;flex:none;font-family:var(--body);font-weight:700}
+  p{margin:0 0 13px;color:var(--dim)}
+  p strong, li strong{color:var(--ink);font-weight:600}
+  hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+  .done{color:var(--ink);font-size:14.5px;margin:4px 0 0}
+  .done b{color:var(--teal)}
+  .callout{background:#f6f4fe;border-left:3px solid var(--violet);border-radius:0 10px 10px 0;
+    padding:14px 18px;margin:14px 0;color:var(--ink);font-size:15px}
+  .flag{background:#fdf6e7;border-left:3px solid var(--amber);border-radius:0 10px 10px 0;
+    padding:14px 18px;margin:14px 0;font-size:15px}
+  .flag b{color:var(--amber)}
+  table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:15px}
+  th,td{padding:10px 8px;text-align:right;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font-family:var(--disp);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  tbody tr td:first-child{font-weight:600;color:var(--ink)}
+  .roi-val{font-family:var(--disp);font-weight:700;color:var(--teal)}
+  .src{font-size:12.5px;color:var(--faint);font-style:italic;margin-top:4px}
+  .choices{margin:6px 0 4px;color:var(--dim);font-size:15px}
+  .choices b{color:var(--violet2)}
+  .closer{margin-top:34px;background:var(--violet2);color:#fff;border-radius:13px;padding:22px 26px}
+  .closer h3{font-family:var(--disp);margin:0 0 10px;font-size:17px}
+  .closer p{color:#e7e3ff;margin:0 0 6px;font-size:15px}
+  .closer b{color:#fff}
+  @media(max-width:560px){.page{padding:30px 24px}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="eyebrow">ThreadKeep · Working Session</div>
+  <h1>Two decisions to walk out with</h1>
+  <div class="when">Mike &amp; Chris &nbsp;·&nbsp; June 15, 2026</div>
+
+  <p class="lede">The build is in good shape — the hard technical work is behind us. What's standing between ThreadKeep and a launch now isn't code; it's <b>two calls we keep deferring</b>. Today is about making them.</p>
+
+  <hr>
+
+  <h2>Where we are</h2>
+  <p>The pieces that were genuinely risky are done and verified: PDF exports come out accurate and in order, the app only ever reads a copy of your Messages data (never the original), five export formats ship, the Apple developer account is live, and the privacy docs are drafted and ready for a look. The plan still shows ~7% of tasks complete, but that number is misleading — most of what's left is sequenced behind the two decisions below.</p>
+  <p class="done"><b>Cleared:</b> &nbsp;PDF accuracy · read-only data access · 5 export formats · Apple Developer + TestFlight · privacy docs drafted</p>
+
+  <div class="callout"><b>And we're live on the web.</b> <a href="https://threadkeep.xyz" style="color:var(--violet2);font-weight:600">threadkeep.xyz</a> is up now — full marketing site with feature screenshots, working checkout (card, Apple Pay, PayPal, Venmo), an install guide, specs, and FAQ. Total domain cost: <strong>$1, from Porkbun.</strong> The storefront and the product story are real and shippable today.</div>
+
+  <h2><span class="n">1</span> What's Chris's role?</h2>
+  <p>This is the decision that unlocks everything else. Three shapes on the table:</p>
+  <p class="choices"><b>Trial</b> — a time-boxed run on the operations lane, revisit at a checkpoint. &nbsp;·&nbsp; <b>Ongoing</b> — committed launch partner who owns the lane through release. &nbsp;·&nbsp; <b>Advisory</b> — lighter touch, and the ops work stays with Mike.</p>
+  <p>Four things wait on this answer: the legal package (privacy policy, EULA, disclaimers), owning the tracker, the Apple review prep, and the tester program.</p>
+  <div class="flag"><b>Why now:</b> the legal quotes are the longest lead time in the whole plan and can't start until this is settled. It's been open two weeks — every week it stays open pushes launch out by a week.</div>
+
+  <h2><span class="n">2</span> What do we charge?</h2>
+  <p>Current thinking is <strong>$29–49, one-time</strong> — not a subscription. The earlier $8.99 idea got cut: at that price the app reads as a throwaway utility to professionals, and we'd need a thousand-plus sales just to break even. A higher price both signals quality and matches the privacy-and-security investment underneath it.</p>
+  <div class="flag"><b>The snag to settle:</b> both the ROI model below <em>and the live site</em> already say $18.99 — roughly half of where we're leaning. So this isn't theoretical: if we move to $29–49, threadkeep.xyz and the checkout need updating before launch. Either commit to $18.99 as the real number, or decide to reprice and treat the current site as a placeholder. To finalize honestly we still want competitor sales data and one willingness-to-pay conversation with a professional user.</p>
+
+  <h2>The case, in three numbers</h2>
+  <p>Three funding levels, each over five years. Costs are real — straight from the conservative budget. Revenue is a modeled range, not a promise. The headline: <strong>every level pays for itself in year two</strong>, and the more we put into legal, security, and marketing, the better the return — because that spend is what opens the professional market.</p>
+  <table>
+    <thead><tr><th>If we invest…</th><th>5-yr cost</th><th>5-yr profit</th><th>Return</th></tr></thead>
+    <tbody>
+      <tr><td>Lean &amp; organic</td><td>~$8.6k</td><td>~$43k</td><td class="roi-val">496%</td></tr>
+      <tr><td>+ marketing</td><td>~$30k</td><td>~$140k</td><td class="roi-val">467%</td></tr>
+      <tr><td>+ pro / upmarket</td><td>~$51k</td><td>~$354k</td><td class="roi-val">689%</td></tr>
+    </tbody>
+  </table>
+  <p class="src">Modeled at the conservative $18.99. At our $29–49 target, every profit figure climbs meaningfully.</p>
+
+  <div class="callout">The single biggest risk on the board is the solo-founder bottleneck — one person can't carry QA, security, legal, marketing, and support at once. That's not an aside; it's the whole reason a partner moves the numbers from "lean" toward "upmarket." This meeting is where we decide whether to.</div>
+
+  <div class="closer">
+    <h3>Walk out with two answers</h3>
+    <p>① <b>Chris's role</b> — trial, ongoing, or advisory.</p>
+    <p>② <b>The price</b> — lock a number, and reprice the ROI to match (or keep $18.99 as the stated floor).</p>
+  </div>
+
+</div>
+</body>
+</html>
